@@ -41,8 +41,8 @@
     
     
     <title>
-          
-            未 的研零学习笔记
+        
+            Automated Third-Party Library Detection for Android Applications: Are We There Yet? | 未 的研零学习笔记
         
     </title>
     
@@ -114,9 +114,9 @@
     <v-divider></v-divider>
     
         <div class="post-toc">
-            <a href="/2022/11/02/Article1/" class="toc-header">Table of Contents</a>
+            <a href="/2022/10/27/Article1/" class="toc-header">Table of Contents</a>
             <div class="toc-content">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Automated-Third-Party-Library-Detection-for-Android-Applications-Are-We-There-Yet"><span class="toc-number">1.</span> <span class="toc-text">Automated Third-Party Library Detection for Android Applications: Are We There Yet?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preliminary-%E5%88%9D%E6%AD%A5%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">Preliminary 初步准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%8D%93%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%EF%BC%88TPL%EF%BC%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">安卓第三方库（TPL）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TPL%E6%A3%80%E6%B5%8B%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">TPL检测过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B7%B7%E6%B7%86%E7%AD%96%E7%95%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">代码混淆策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.4.</span> <span class="toc-text">相关工作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TPL%E6%A3%80%E6%B5%8B%E6%A6%82%E8%BF%B0"><span class="toc-number">1.3.</span> <span class="toc-text">TPL检测概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.1.</span> <span class="toc-text">预处理比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E5%AE%9E%E4%BE%8B%E6%9E%84%E5%BB%BA%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.2.</span> <span class="toc-text">库实例构建比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.3.</span> <span class="toc-text">特征提取比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E8%AF%86%E5%88%AB%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.4.</span> <span class="toc-text">库识别比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E8%AF%81%E7%A0%94%E7%A9%B6%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.4.</span> <span class="toc-text">实证研究设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E9%80%89%E6%8B%A9"><span class="toc-number">1.4.1.</span> <span class="toc-text">工具选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0"><span class="toc-number">1.4.2.</span> <span class="toc-text">数据构造</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E7%BB%93%E6%9E%9C"><span class="toc-number">1.5.</span> <span class="toc-text">评估结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E6%80%A7"><span class="toc-number">1.5.1.</span> <span class="toc-text">有效性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E7%8E%87-%E6%A3%80%E6%B5%8B%E6%97%B6%E9%97%B4"><span class="toc-number">1.5.2.</span> <span class="toc-text">效率&#x2F;检测时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%97%E6%B7%B7%E6%B7%86%E8%83%BD%E5%8A%9B"><span class="toc-number">1.5.3.</span> <span class="toc-text">抗混淆能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%93%E7%94%A8%E6%80%A7"><span class="toc-number">1.5.4.</span> <span class="toc-text">易用性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A8%E8%AE%BA"><span class="toc-number">1.6.</span> <span class="toc-text">讨论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%94%B9%E8%BF%9B"><span class="toc-number">1.6.1.</span> <span class="toc-text">工具改进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91"><span class="toc-number">1.6.2.</span> <span class="toc-text">未来的研究方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.7.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E9%87%8A%E4%B9%89%E7%A7%AF%E7%B4%AF"><span class="toc-number">1.8.</span> <span class="toc-text">名词释义积累</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Automated-Third-Party-Library-Detection-for-Android-Applications-Are-We-There-Yet"><span class="toc-number">1.</span> <span class="toc-text">Automated Third-Party Library Detection for Android Applications: Are We There Yet?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preliminary-%E5%88%9D%E6%AD%A5%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">Preliminary 初步准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%8D%93%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%EF%BC%88TPL%EF%BC%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">安卓第三方库（TPL）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TPL%E6%A3%80%E6%B5%8B%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">TPL检测过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B7%B7%E6%B7%86%E7%AD%96%E7%95%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">代码混淆策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.4.</span> <span class="toc-text">相关工作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TPL%E6%A3%80%E6%B5%8B%E6%A6%82%E8%BF%B0"><span class="toc-number">1.3.</span> <span class="toc-text">TPL检测概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.1.</span> <span class="toc-text">预处理比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E5%AE%9E%E4%BE%8B%E6%9E%84%E5%BB%BA%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.2.</span> <span class="toc-text">库实例构建比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.3.</span> <span class="toc-text">特征提取比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93%E8%AF%86%E5%88%AB%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.4.</span> <span class="toc-text">库识别比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E8%AF%81%E7%A0%94%E7%A9%B6%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.4.</span> <span class="toc-text">实证研究设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E9%80%89%E6%8B%A9"><span class="toc-number">1.4.1.</span> <span class="toc-text">工具选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0"><span class="toc-number">1.4.2.</span> <span class="toc-text">数据构造</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E7%BB%93%E6%9E%9C"><span class="toc-number">1.5.</span> <span class="toc-text">评估结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E6%80%A7"><span class="toc-number">1.5.1.</span> <span class="toc-text">有效性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E7%8E%87-x2F-%E6%A3%80%E6%B5%8B%E6%97%B6%E9%97%B4"><span class="toc-number">1.5.2.</span> <span class="toc-text">效率&#x2F;检测时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%97%E6%B7%B7%E6%B7%86%E8%83%BD%E5%8A%9B"><span class="toc-number">1.5.3.</span> <span class="toc-text">抗混淆能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%93%E7%94%A8%E6%80%A7"><span class="toc-number">1.5.4.</span> <span class="toc-text">易用性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A8%E8%AE%BA"><span class="toc-number">1.6.</span> <span class="toc-text">讨论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%94%B9%E8%BF%9B"><span class="toc-number">1.6.1.</span> <span class="toc-text">工具改进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91"><span class="toc-number">1.6.2.</span> <span class="toc-text">未来的研究方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.7.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E9%87%8A%E4%B9%89%E7%A7%AF%E7%B4%AF"><span class="toc-number">1.8.</span> <span class="toc-text">名词释义积累</span></a></li></ol></li></ol>
             </div>
         </div>
     
@@ -223,15 +223,15 @@
     
     
         <div class="post-header">
-  <a class="post-header-title font-weight-medium" href="/2022/11/02/Article1/"></a>
+  <a class="post-header-title font-weight-medium" href="/2022/10/27/Article1/">Automated Third-Party Library Detection for Android Applications: Are We There Yet?</a>
   <div class="post-header-meta">   
     <span>
       <v-icon color="">event</v-icon>
-      Posted on:&nbsp;2022-11-02
+      Posted on:&nbsp;2022-10-27
     </span>
     <span>
       <v-icon color="">event_available</v-icon>
-      Edited on:&nbsp;2022-11-01
+      Edited on:&nbsp;2022-11-02
     </span>
     <span>
       <v-icon color="">folder</v-icon>
@@ -278,7 +278,7 @@
 </ul>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基于聚类的方法：解耦过滤主程序，并将具有相似特征的非主模块聚集在一起，一个集群视作一个TPL</span><br><span class="line">基于相似性比较的方法：首先收集各种TPL文件，将所有模块都视作可能的TPL并与先前收集的TPL进行对比相似性以识别并标识。</span><br></pre></td></tr></table></figure>
 
-<p><img src="Article1/Figure1TPLDetection.png" alt="img"></p>
+<p><img src="/Figure1TPLDetection.png" alt="img"></p>
 <h3 id="代码混淆策略"><a href="#代码混淆策略" class="headerlink" title="代码混淆策略"></a>代码混淆策略</h3><p>代码混淆通常用于保护软件免受逆向工程（代码混淆并不能真正阻止反向工程，只能增大其难度），Allatori，DashO，Proguard都是常用的代码混淆工具。有一些常用的混淆方法：</p>
 <ul>
 <li>标识符重命名</li>
@@ -344,11 +344,11 @@
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">聚类方法：不需要收集真实的TPL来构建数据库。LibD和LibRadar选择聚类方法来识别TPL。</span><br><span class="line"></span><br><span class="line">相似性比较方法：需收集TPL数据集作为GT（ground truth，即正确打标签的训练数据）</span><br><span class="line"></span><br><span class="line">基于分类的方法：AdDetect使用该方法，它使用SVM对广告/非广告库进行分类</span><br><span class="line">SVM支持向量机是一种二分类模型，它的基本模型是定义在特征空间上的间隔最大的线性分类器</span><br></pre></td></tr></table></figure>
 
 <p>以上的比较结果都整理表格所示</p>
-<p><img src="Article1/Comparison.png" alt="img"></p>
+<p><img src="/Comparison.png" alt="img"></p>
 <h2 id="实证研究设计"><a href="#实证研究设计" class="headerlink" title="实证研究设计"></a>实证研究设计</h2><p>在研究设计中，将通过四个标准彻底比较这些最先进的TPL检测工具</p>
 <ul>
 <li>Effectiveness（有效性）：在无偏差的数据集上比较召回率、精度和F1-Score</li>
-<li>Efficiency/Scalability（效率/可扩展性）：比较工具的检测时间，并指出可大规模扩展的工具</li>
+<li>Efficiency&#x2F;Scalability（效率&#x2F;可扩展性）：比较工具的检测时间，并指出可大规模扩展的工具</li>
 <li>Capability of Obfuscation-resilience（抗混淆）：混淆的TPL会影响检测精度，需要比较检测工具对混淆检测的能力</li>
 <li>Ease of Use（易用性）：设计调查以调查用户的使用体验</li>
 </ul>
@@ -358,7 +358,7 @@
 <li>检测开源程序（混淆和未混淆的）评估指标三（抗混淆能力）</li>
 <li>对于指标三使用了单独的数据集，因为：无法确定前者数据集的程序是否混淆，什么样的混淆方式，缺乏有混淆和无混淆的对比</li>
 </ul>
-<p>效果/效率评估数据集</p>
+<p>效果&#x2F;效率评估数据集</p>
 <ul>
 <li>这个数据集需要提供apks和TPLs之间的映射信息，提供提供每个TPL的完整版本集，原因：消除由不完整版本的TPL引起的副作用，且由于有些app支持TPL自动更新，难以保证版本的具体映射。</li>
 <li>TPL收集：使用library-scraper，maven central，Jcenterr和Google maven库等，选择了59个唯一的TPL和2115个相应的库版本</li>
@@ -373,14 +373,14 @@
 </ul>
 <h2 id="评估结果"><a href="#评估结果" class="headerlink" title="评估结果"></a>评估结果</h2><p>实验环境：3台服务器，Ubuntu 16.04, 18-core Intel(R) Xeon(R) CPU @ 2.30GHz, 192GB内存空间</p>
 <h3 id="有效性"><a href="#有效性" class="headerlink" title="有效性"></a>有效性</h3><p>总体结果：高准确率低召回率，以F1值作综合性能指标，LibScout优于其他工具，可见下图数据</p>
-<p><img src="Article1/Effectiveness.png" alt="img"></p>
+<p><img src="/Effectiveness.png" alt="img"></p>
 <p>FP（False Positive 假阳性误报）原因分析</p>
 <ul>
 <li>TPL之间的依赖性</li>
 <li>具有高相似性和一些TPL检测的封闭版本的代码</li>
 <li>同一个TPL根包的名称变化可能导致重复报告</li>
 </ul>
-<p>FN（False Negative 假阴性误报/未检出）原因分析：代码混淆与TPL识别方法</p>
+<p>FN（False Negative 假阴性误报&#x2F;未检出）原因分析：代码混淆与TPL识别方法</p>
 <ul>
 <li>混淆器移除TPL的整个包结构，并将所有文件放在应用程序的根目录下对各个检测工具检测率均有较大影响</li>
 <li>死代码删除对各个工具均有一定影响</li>
@@ -396,7 +396,7 @@
 <li>在测试数据集中，相当大部分的应用程序都会包含多个dex，则对只考虑单Dex的工具将大大影响有效性，因此因此，作者团队建议TPL检测工具应考虑多Dex的情况。</li>
 </ul>
 <p><strong>有效性指标总结：LibScout表现最好</strong>，将包名称和结构（易碎且不可靠）作为生成TPL签名的辅助特征会导致大量误报</p>
-<h3 id="效率-检测时间"><a href="#效率-检测时间" class="headerlink" title="效率/检测时间"></a>效率/检测时间</h3><p>公平性保证：</p>
+<h3 id="效率-x2F-检测时间"><a href="#效率-x2F-检测时间" class="headerlink" title="效率&#x2F;检测时间"></a>效率&#x2F;检测时间</h3><p>公平性保证：</p>
 <ul>
 <li>检测时间不包括TPL特征生成时间</li>
 <li>时间成本包括应用程序的TPL检测过程，即预处理应用程序、分析应用程序、提取代码特征、识别内部的TPL这些步骤</li>
@@ -410,9 +410,9 @@
 <li>比较策略极大影响了效率：先比较顶层包级哈希并自上而下，此方式效率更高；成对比较策略来识别特定库更耗时</li>
 <li>TPL代码特征粒度影响检测效率：使用类级功能的系统的开销高于使用包级功能的系统（TPL功能复杂时，类和方法的数量也会增加，比较时间将呈指数级增加）</li>
 </ul>
-<p><strong>效率/检测时间指标总结：LibRadar在检测时间方面优于现有的检测工具</strong>，特征粒度会影响检测工具的性能：类级别的特征会消耗更多的系统资源和检测时间</p>
+<p><strong>效率&#x2F;检测时间指标总结：LibRadar在检测时间方面优于现有的检测工具</strong>，特征粒度会影响检测工具的性能：类级别的特征会消耗更多的系统资源和检测时间</p>
 <h3 id="抗混淆能力"><a href="#抗混淆能力" class="headerlink" title="抗混淆能力"></a>抗混淆能力</h3><p>在针对不同的混淆工具和针对不同的混淆策略比较检测率研究各工具的抗混淆能力。</p>
-<p>针对不同混淆工具的抗混淆能力：<br><img src="Article1/Anti-obfuscation.png" alt="img"></p>
+<p>针对不同混淆工具的抗混淆能力：<br><img src="/Anti-obfuscation.png" alt="img"></p>
 <ul>
 <li>总体结果如上图</li>
 <li>在未混淆的检测中，LibPecker表现最好，LibID检测率大幅下滑（主要由于受到dex2jar的兼容性限制，无法支持Java 9+的TPL，其他原因包括数据集中未给出完整版本，检测力度是库级别等）</li>
@@ -423,7 +423,7 @@
 <p>针对不同混淆策略的抗混淆能力：</p>
 <ul>
 <li>主要评估了这些工具对三项混淆策略的抗混淆能力：控制流混淆，包扁平化，死代码删除<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">对于上述三种混淆策略，它们的主要影响分别在于：</span><br><span class="line">控制流混淆：会导致CFG（控制流图）结构的变化，这会影响一些使用CFG作为签名的工具的结果</span><br><span class="line">包扁平化技术：可以影响根据包层次结构，这会影响工具生成代码特征的结果</span><br><span class="line">死代码去除：可以去除一些TPL的指纹，降低检测率</span><br></pre></td></tr></table></figure>
-<img src="Article1/Anti-obfuscation2.png" alt="img"></li>
+<img src="/Anti-obfuscation2.png" alt="img"></li>
 <li>总体结果如上图所示，LibPecker在抗这些混淆技术方面优于其他工具，LibID依然检测率最低</li>
 <li>特征粒度会影响混淆弹性能力：LibPecker和ORLIS使用类级别特征，因此效果更好</li>
 <li>LibScout对这些混淆技术都很敏感。因为它利用Merkle树生成TPL配置文件（部分依赖于包层次结构），且LibScout使用md5生成库指纹（很容易导致结果变化）</li>
@@ -440,7 +440,7 @@
 <h2 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h2><p>作者强调从不同角度（用户与工具实现）吸取的经验教训，并为未来的研究提供见解参考</p>
 <p>为用户提供工具选择建议：</p>
 <ul>
-<li>对于恶意软件/重新打包应用程序的TOL检测，建议LibSift的策略过滤TPL（使用包依赖图PDG作为特征和层次聚类的方法的分离策略，这种模块解耦方法更关注应用本身的特性，使用PDG拆分TPL比其他依赖包树结构的方法更可靠）</li>
+<li>对于恶意软件&#x2F;重新打包应用程序的TOL检测，建议LibSift的策略过滤TPL（使用包依赖图PDG作为特征和层次聚类的方法的分离策略，这种模块解耦方法更关注应用本身的特性，使用PDG拆分TPL比其他依赖包树结构的方法更可靠）</li>
 <li>对于易受攻击（有漏洞的）的应用内TPL检测，推荐在识别特定库版本的效果更好的LibScout（通过NVD等漏洞数据库中的TPL版本信息容易确认漏洞）</li>
 <li>对于应用程序的组件分析，推荐抗常规混淆工具和混淆策略效果比较好的LibPecker</li>
 <li>对于大规模TPL检测，建议使用具有高效率（平均用时短）的LibRadar</li>
@@ -477,7 +477,7 @@
 <ul>
 <li>在研究中，相当一部分TPL使用Kotlin开发（一些语法规则与Java有所不同）<ul>
 <li>如：Kotlin的源文件可以放在任何目录中，这可能会导致类似包扁平化混淆技术的效果</li>
-<li>如：应用程序开发人员可以自定义Kotlin TPL，可以修改可以轻松更改TPL签名的包名称/结构（则依赖包结构的探测工具可能失效）</li>
+<li>如：应用程序开发人员可以自定义Kotlin TPL，可以修改可以轻松更改TPL签名的包名称&#x2F;结构（则依赖包结构的探测工具可能失效）</li>
 </ul>
 </li>
 <li>此外，未来的研究人员还可以考虑对原生库（二进制代码）检测和相关安全问题的理解</li>
